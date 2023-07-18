@@ -50,18 +50,18 @@ async function removeContact(id) {
         await writeFile(updatedContacts);
         return updatedContacts.length !== contacts.length;
     } else {
-        return false;
+        return null;
     }
 }
 
 
 // Возвращает объект добавленного контакта. 
 
-async function addContact(data) {
+async function addContact(name, email, phone) {
     const contacts = await readFile();
     const newContact = {
         id: nanoid(),
-        ...data
+        name, email, phone
     };
     contacts.push(newContact);
     await writeFile(contacts);

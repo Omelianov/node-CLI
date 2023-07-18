@@ -3,7 +3,7 @@ const yargs = require("yargs");
 const { hideBin } = require("yargs/helpers");
 const nodemon = require("nodemon");
 
-const contacts = require("/contacts");
+const contacts = require("./contacts");
 
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
