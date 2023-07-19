@@ -15,7 +15,6 @@ async function writeFile(contacts) {
     console.log('Contacts saved successfully.');
 }
 
-// Возвращает массив контактов
 
 async function listContacts() {
     const contacts = await readFile();
@@ -26,8 +25,6 @@ async function listContacts() {
     }
 }
 
-
-// Возвращает объект контакта с таким id.Возвращает null, если объект с таким id не найден.
 
 async function getContactById(id) {
     const contacts = await readFile();
@@ -40,9 +37,6 @@ async function getContactById(id) {
 }
 
 
-
-// Возвращает объект удаленного контакта.Возвращает null, если объект с таким id не найден.
-
 async function removeContact(id) {
     const contacts = await readFile();
     if (contacts) {
@@ -54,8 +48,6 @@ async function removeContact(id) {
     }
 }
 
-
-// Возвращает объект добавленного контакта. 
 
 async function addContact(name, email, phone) {
     const contacts = await readFile();
